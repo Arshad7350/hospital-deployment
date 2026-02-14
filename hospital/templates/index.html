@@ -1,15 +1,15 @@
 {% extends 'base.html' %}
 
-{% block title%}
+{% block title %}
 Home
 {% endblock %}
 
-{% block content%}
-
+{% block content %}
 {% load static %}
 
+<!-- ================= CAROUSEL ================= -->
+<div id="carouselExampleDark" class="carousel slide" data-bs-ride="carousel">
 
-<div id="carouselExampleDark" class="carousel carousel-dark slide" data-bs-ride="carousel">
   <div class="carousel-indicators">
     <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active"></button>
     <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1"></button>
@@ -20,30 +20,28 @@ Home
 
     <!-- Slide 1 -->
     <div class="carousel-item active" data-bs-interval="5000">
-      <img src="{% static 'images/img1.png' %}" class="d-block w-100" alt="" height="500px" >
-      <div class="carousel-caption d-none d-md-block mb-5">
-        <h1 class="fw-bold display-4 head">Advanced Healthcare Services</h1>
-        <p class="fs-3 para">Providing modern medical facilities with expert care.</p>
+      <img src="{% static 'images/img1.png' %}" class="d-block w-100 carousel-img" alt="">
+      <div class="carousel-caption mb-3">
+        <h1 class="fw-bold head">Advanced Healthcare Services</h1>
+        <p class="para">Providing modern medical facilities with expert care.</p>
       </div>
-
-
     </div>
 
     <!-- Slide 2 -->
     <div class="carousel-item" data-bs-interval="5000">
-      <img src="{% static 'images/img2.jpg' %}" class="d-block w-100" alt="" height="500px">
-      <div class="carousel-caption d-none d-md-block mb-5">
-        <h3 class="fw-bold display-4 head">Trusted Doctors & Staff</h3>
-        <p class="fs-3 para">Dedicated professionals committed to patient wellbeing.</p>
+      <img src="{% static 'images/img2.jpg' %}" class="d-block w-100 carousel-img" alt="">
+      <div class="carousel-caption mb-3">
+        <h1 class="fw-bold head">Trusted Doctors & Staff</h1>
+        <p class="para">Dedicated professionals committed to patient wellbeing.</p>
       </div>
     </div>
 
     <!-- Slide 3 -->
     <div class="carousel-item">
-      <img src="{% static 'images/img3.jpg' %}" class="d-block w-100" alt="" height="500px">
-      <div class="carousel-caption d-none d-md-block mb-5">
-        <h3 class="fw-bold display-4 head">Smart Hospital Management</h3>
-        <p class="fs-3 para">Efficient systems for better healthcare experience.</p>
+      <img src="{% static 'images/img3.jpg' %}" class="d-block w-100 carousel-img" alt="">
+      <div class="carousel-caption mb-3">
+        <h1 class="fw-bold head">Smart Hospital Management</h1>
+        <p class="para">Efficient systems for better healthcare experience.</p>
       </div>
     </div>
 
@@ -57,20 +55,26 @@ Home
   </button>
 </div>
 
+<!-- ================= CONTENT ================= -->
+<section class="container my-5">
 
-<section class="container">
-  <h1 class="text-center mb-4 mt-4 header">Welcome to Our <br> Hospital Management System</h1>
-  <div class="d-flex justify-content-around align-items-center my-5">
-    <div>
-      <img src="{% static 'images/home.png' %}" alt="" class="image" width="600" height="400">
+  <h1 class="text-center mb-5 header">
+    Welcome to Our <br> Hospital Management System
+  </h1>
+
+  <!-- SECTION 1 -->
+  <div class="row align-items-center my-5">
+    <div class="col-md-6 text-center mb-3 mb-md-0">
+      <img src="{% static 'images/home.png' %}" alt="" class="image img-fluid">
     </div>
-    <div class="ms-2 w-50">
-      <p class="fs-4 paragraph">
+
+    <div class="col-md-6">
+      <p class="paragraph">
         Our Hospital Management System is designed to provide efficient, reliable, and patient-friendly healthcare
         services. With advanced technology and a dedicated medical team, we ensure smooth hospital operations, accurate
         patient records, and quality treatment under one platform.
       </p>
-      <p class="fs-4 paragraph">
+      <p class="paragraph">
         From patient registration and appointment booking to doctor management and medical records, our system helps
         streamline all hospital activities. We focus on saving time, reducing paperwork, and improving communication
         between patients, doctors, and hospital staff.
@@ -78,47 +82,117 @@ Home
     </div>
   </div>
 
-  <div class="d-flex justify-content-around align-items-center my-5">
-    <div class="ms-2 w-50">
-      <p class="fs-4 paragraph">
+  <!-- SECTION 2 -->
+  <div class="row align-items-center my-5">
+    <div class="col-md-6 order-2 order-md-1">
+      <p class="paragraph">
         Our Hospital Management System helps hospitals manage daily operations efficiently and securely. We provide a
         modern platform that simplifies patient care, appointment scheduling, and hospital administration.
       </p>
-      <p class="fs-4 paragraph">
+      <p class="paragraph">
         By combining technology with healthcare, our system reduces manual work, improves accuracy, and ensures better
         coordination between patients, doctors, and staff.
+      </p>
     </div>
-    <div>
-      <img src="{% static 'images/home1.png' %}" alt="" class="image" width="600" height="400">
+
+    <div class="col-md-6 text-center order-1 order-md-2 mb-3 mb-md-0">
+      <img src="{% static 'images/home1.png' %}" alt="" class="image img-fluid">
     </div>
   </div>
+
 </section>
 
+<!-- ================= STYLES ================= -->
 <style>
+  .carousel-img {
+    height: 500px;
+    object-fit: cover;
+  }
+
+  /* TEXT OVER IMAGE FIX */
+  .carousel-caption {
+    background: rgba(255, 255, 255, 0.75);
+    padding: 20px;
+    border-radius: 12px;
+  }
+
+  .head {
+    color: rgb(11, 36, 73);
+    font-weight: 700;
+    font-size: 36px;
+  }
+
+  .para {
+    color: #000;
+    font-size: 18px;
+    text-align: center;
+  }
+
   .image {
     border-radius: 15px;
     box-shadow: rgb(11, 36, 73) 0px 0px 10px 0px;
-    transition: 0.3s;
-    opacity: 0.9;
+    opacity: 0.95;
   }
+
   .header {
     color: rgb(11, 36, 73);
-  }
-  .paragraph {
-    text-align: justify;
-    text-justify: inter-word;
-    font-size: 18px;
-  }
-  .head {
-    color: rgb(11, 36, 73);
-  }
-  .para {
-    text-align: center;
-    color: black;
-  }
-  .header {
     font-weight: 700;
   }
-  
+
+  .paragraph {
+    text-align: justify;
+    font-size: 18px;
+  }
+
+  /* ---------- MOBILE ≤ 380px ---------- */
+  @media (max-width: 380px) {
+    .carousel-img {
+      height: 250px;
+    }
+
+    .carousel-caption {
+      padding: 10px;
+    }
+
+    .head {
+      font-size: 18px;
+    }
+
+    .para {
+      font-size: 13px;
+    }
+
+    .header {
+      font-size: 22px;
+    }
+
+    .paragraph {
+      font-size: 14px;
+    }
+  }
+
+  /* ---------- EXTRA SMALL ≤ 350px ---------- */
+  @media (max-width: 350px) {
+    .carousel-img {
+      height: 220px;
+    }
+
+    .head {
+      font-size: 16px;
+    }
+
+    .para {
+      font-size: 12px;
+    }
+
+    .header {
+      font-size: 20px;
+    }
+
+    .paragraph {
+      font-size: 13px;
+    }
+  }
 </style>
+
 {% endblock %}

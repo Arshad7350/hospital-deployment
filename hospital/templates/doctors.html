@@ -5,62 +5,139 @@ Doctors
 {% endblock %}
 
 {% block content %}
+
 <h1 class="text-center my-3">Doctors</h1>
 <hr>
-<p class="text-center text-muted mb-3 mx-auto paragraph">
+
+<p class="text-center text-muted mb-4 mx-auto paragraph">
     Our hospital is proud to have a team of highly qualified and experienced doctors 
     across various departments. Each doctor is dedicated to providing compassionate, 
     patient-centered care using modern medical practices and advanced technology.
 </p>
 
-<div class="container text-center mb-4">
-    {% for d in doctors %}
+<div class="container mb-5">
+    <div class="row justify-content-center">
 
-    <div class="card" style="width: 18rem; display: inline-block; margin: 10px;">
-        <img src="{{ d.doc_image.url }}" alt="" class="card-img-top" width="286" height="330">
-        <div class="card-body">
-            <h5 class="card-title"> Dr. {{ d.doc_name}}</h5>
-            <p class="card-text">{{ d.doc_spec}}</p>
-            <h6>{{ d.dep_name }} Department</h6>
+        {% for d in doctors %}
+        <div class="col-lg-3 col-md-4 col-sm-6 col-12 d-flex justify-content-center mb-4">
+            <div class="card doctor-card">
+                <img src="{{ d.doc_image.url }}" alt="Dr {{ d.doc_name }}" class="card-img-top doctor-img">
+                <div class="card-body text-center">
+                    <h5 class="card-title">Dr. {{ d.doc_name }}</h5>
+                    <p class="card-text">{{ d.doc_spec }}</p>
+                    <h6>{{ d.dep_name }} Department</h6>
+                </div>
+            </div>
         </div>
+        {% endfor %}
+
     </div>
-
-    {% endfor %}
 </div>
+
+<!-- ================= STYLES ================= -->
 <style>
-    .card-title {
-        font-weight: 700;
-        color: rgb(11, 36, 73);
-    }
-    .card-text {
-        font-size: 17px;
-        font-weight: 500;
-        color: rgb(34, 54, 75);
-    }
-    h6 {
-        color: rgb(30, 59, 102);
-        font-weight: 600;
-        font-size: 18px;
-    }
-    .card {
-        box-shadow: rgb(11, 36, 73) 0px 0px 4px 0px;
-        transition: 0.3s;
-        cursor: pointer;
-    }
-
-    .card:hover {
-        scale: calc(1.02);
-    }
-
     h1 {
         font-weight: 700;
         color: rgb(11, 36, 73);
     }
+
     .paragraph {
         font-size: 20px;
         text-align: justify;
-        text-justify: inter-word;
         max-width: 1000px;
     }
+
+    /* Card */
+    .doctor-card {
+        width: 100%;
+        max-width: 280px;
+        box-shadow: rgb(11, 36, 73) 0px 0px 6px 0px;
+        transition: 0.3s;
+        cursor: pointer;
+    }
+
+    .doctor-card:hover {
+        transform: scale(1.03);
+    }
+
+    .doctor-img {
+        height: 330px;
+        object-fit: cover;
+    }
+
+    .card-title {
+        font-weight: 700;
+        color: rgb(11, 36, 73);
+    }
+
+    .card-text {
+        font-size: 16px;
+        font-weight: 500;
+        color: rgb(34, 54, 75);
+    }
+
+    h6 {
+        color: rgb(30, 59, 102);
+        font-weight: 600;
+        font-size: 16px;
+    }
+
+    /* ---------- MOBILE ≤ 380px ---------- */
+    @media (max-width: 380px) {
+
+        h1 {
+            font-size: 24px;
+        }
+
+        .paragraph {
+            font-size: 14px;
+            padding: 0 10px;
+        }
+
+        .doctor-img {
+            height: 260px;
+        }
+
+        .card-title {
+            font-size: 16px;
+        }
+
+        .card-text {
+            font-size: 14px;
+        }
+
+        h6 {
+            font-size: 14px;
+        }
+    }
+
+    /* ---------- EXTRA SMALL ≤ 350px ---------- */
+    @media (max-width: 350px) {
+
+        h1 {
+            font-size: 22px;
+        }
+
+        .paragraph {
+            font-size: 13px;
+        }
+
+        .doctor-img {
+            height: 240px;
+        }
+
+        .card-title {
+            font-size: 15px;
+        }
+
+        .card-text {
+            font-size: 13px;
+        }
+
+        h6 {
+            font-size: 13px;
+        }
+    }
 </style>
+
 {% endblock %}

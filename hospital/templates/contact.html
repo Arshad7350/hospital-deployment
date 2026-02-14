@@ -11,7 +11,7 @@ Contact
 
 <div class="container my-5">
 
-    <p class="text-center text-muted mb-5 paragraph">
+    <p class="text-center text-muted mb-5 paragraph mx-auto">
         We are here to help you with all your healthcare needs. 
         Appointments, medical inquiries, emergency support ellam vendi 
         ningalkku njangale contact cheyyam. 
@@ -20,10 +20,11 @@ Contact
         njangale reach cheyyuka.
     </p>
 
-    <div class="row">
+    <div class="row g-4 align-items-stretch">
+
         <!-- Contact Details -->
-        <div class="col-md-5">
-            <div class="card p-4">
+        <div class="col-lg-5 col-md-6 col-12">
+            <div class="card p-4 h-100">
                 <h4 class="mb-3">Hospital Contact Details</h4>
 
                 <p><strong>🏥 Hospital Name:</strong> City Care Hospital</p>
@@ -35,33 +36,98 @@ Contact
         </div>
 
         <!-- Google Map -->
-        <div class="col-md-7">
-            <div class="card p-2">
+        <div class="col-lg-7 col-md-6 col-12">
+            <div class="card p-2 h-100">
                 <iframe
                     src="https://www.google.com/maps?q=Kochi%20Kerala&output=embed"
                     width="100%"
-                    height="350"
-                    style="border:0;"
+                    height="100%"
+                    style="border:0; min-height:300px;"
                     allowfullscreen=""
                     loading="lazy">
                 </iframe>
             </div>
         </div>
+
     </div>
 </div>
 
+<!-- ================= STYLES ================= -->
 <style>
+
     h1 {
         color: rgb(11, 36, 73);
         font-weight: 700;
     }
+
     .paragraph {
         text-align: justify;
-        text-justify: inter-word;
         font-size: 20px;
+        max-width: 1000px;
     }
+
     .card {
         box-shadow: rgb(11, 36, 73) 0px 0px 5px 0px;
+        border-radius: 12px;
     }
+
+    /* ---------- TABLET ---------- */
+    @media (max-width: 768px) {
+
+        .paragraph {
+            font-size: 17px;
+            padding: 0 10px;
+        }
+
+        h4 {
+            font-size: 20px;
+        }
+
+        .card p {
+            font-size: 15px;
+        }
+    }
+
+    /* ---------- MOBILE ≤ 380px ---------- */
+    @media (max-width: 380px) {
+
+        h1 {
+            font-size: 24px;
+        }
+
+        h4 {
+            font-size: 18px;
+        }
+
+        .paragraph {
+            font-size: 15px;
+        }
+
+        .card p {
+            font-size: 14px;
+        }
+    }
+
+    /* ---------- EXTRA SMALL ≤ 350px ---------- */
+    @media (max-width: 350px) {
+
+        h1 {
+            font-size: 22px;
+        }
+
+        h4 {
+            font-size: 17px;
+        }
+
+        .paragraph {
+            font-size: 14px;
+        }
+
+        .card p {
+            font-size: 13px;
+        }
+    }
+
 </style>
+
 {% endblock %}
