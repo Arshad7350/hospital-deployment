@@ -1,0 +1,67 @@
+{% extends 'base.html' %}
+
+{% block title %}
+Contact
+{% endblock %}
+
+{% block content %}
+
+<h1 class="text-center mb-4 mt-4">Contact Us</h1>
+<hr>
+
+<div class="container my-5">
+
+    <p class="text-center text-muted mb-5 paragraph">
+        We are here to help you with all your healthcare needs. 
+        Appointments, medical inquiries, emergency support ellam vendi 
+        ningalkku njangale contact cheyyam. 
+        Our dedicated medical team is available 24/7 to provide quality care 
+        and quick assistance. Phone, email allenkil direct hospital visit cheyth 
+        njangale reach cheyyuka.
+    </p>
+
+    <div class="row">
+        <!-- Contact Details -->
+        <div class="col-md-5">
+            <div class="card p-4">
+                <h4 class="mb-3">Hospital Contact Details</h4>
+
+                <p><strong>🏥 Hospital Name:</strong> City Care Hospital</p>
+                <p><strong>📍 Address:</strong> MG Road, Kochi, Kerala</p>
+                <p><strong>📞 Phone:</strong> +91 98765 43210</p>
+                <p><strong>📧 Email:</strong> citycare@gmail.com</p>
+                <p><strong>⏰ Working Hours:</strong> 24 × 7</p>
+            </div>
+        </div>
+
+        <!-- Google Map -->
+        <div class="col-md-7">
+            <div class="card p-2">
+                <iframe
+                    src="https://www.google.com/maps?q=Kochi%20Kerala&output=embed"
+                    width="100%"
+                    height="350"
+                    style="border:0;"
+                    allowfullscreen=""
+                    loading="lazy">
+                </iframe>
+            </div>
+        </div>
+    </div>
+</div>
+
+<style>
+    h1 {
+        color: rgb(11, 36, 73);
+        font-weight: 700;
+    }
+    .paragraph {
+        text-align: justify;
+        text-justify: inter-word;
+        font-size: 20px;
+    }
+    .card {
+        box-shadow: rgb(11, 36, 73) 0px 0px 5px 0px;
+    }
+</style>
+{% endblock %}

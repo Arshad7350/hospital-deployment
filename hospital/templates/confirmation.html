@@ -1,0 +1,52 @@
+{% extends 'base.html' %}
+
+{% block title %}
+Booking Confirmation
+{% endblock %}
+
+{% block content %}
+
+<div class="container my-5">
+    <div class="row justify-content-center">
+        <div class="col-md-8 text-center">
+
+            <div class="card shadow p-5">
+                <i class="fa-solid fa-circle-check text-success mb-3" style="font-size: 60px;"></i>
+
+                <h2 class="fw-bold mb-3">Appointment Booked Successfully</h2>
+
+                <p class="text-muted mb-4">
+                    Thank you for booking an appointment with <strong>CityCare Hospital</strong>.
+                    We have received your appointment request. Our representative will contact you
+                    shortly to confirm the details.
+                </p>
+
+                <div class="alert alert-success" role="alert">
+                    📞 Please keep your phone available for confirmation.
+                </div>
+
+                <a href="{% url 'home' %}" class="btn  mt-3">
+                    Back to Home
+                </a>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<style>
+    .card {
+        box-shadow: rgb(11, 36, 73) 0px 0px 12px 0px;
+        margin-top: 50px;
+        margin-bottom: 53px;
+    }
+    .btn {
+        background-color: rgb(11, 36, 73);
+        padding: 10px 20px;
+        border: none;
+        color: white;
+        border-radius: 8px;
+    }
+</style>
+
+{% endblock %}

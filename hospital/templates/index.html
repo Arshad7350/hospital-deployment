@@ -1,0 +1,124 @@
+{% extends 'base.html' %}
+
+{% block title%}
+Home
+{% endblock %}
+
+{% block content%}
+
+{% load static %}
+
+
+<div id="carouselExampleDark" class="carousel carousel-dark slide" data-bs-ride="carousel">
+  <div class="carousel-indicators">
+    <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active"></button>
+    <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1"></button>
+    <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2"></button>
+  </div>
+
+  <div class="carousel-inner">
+
+    <!-- Slide 1 -->
+    <div class="carousel-item active" data-bs-interval="5000">
+      <img src="{% static 'images/img1.png' %}" class="d-block w-100" alt="" height="500px" >
+      <div class="carousel-caption d-none d-md-block mb-5">
+        <h1 class="fw-bold display-4 head">Advanced Healthcare Services</h1>
+        <p class="fs-3 para">Providing modern medical facilities with expert care.</p>
+      </div>
+
+
+    </div>
+
+    <!-- Slide 2 -->
+    <div class="carousel-item" data-bs-interval="5000">
+      <img src="{% static 'images/img2.jpg' %}" class="d-block w-100" alt="" height="500px">
+      <div class="carousel-caption d-none d-md-block mb-5">
+        <h3 class="fw-bold display-4 head">Trusted Doctors & Staff</h3>
+        <p class="fs-3 para">Dedicated professionals committed to patient wellbeing.</p>
+      </div>
+    </div>
+
+    <!-- Slide 3 -->
+    <div class="carousel-item">
+      <img src="{% static 'images/img3.jpg' %}" class="d-block w-100" alt="" height="500px">
+      <div class="carousel-caption d-none d-md-block mb-5">
+        <h3 class="fw-bold display-4 head">Smart Hospital Management</h3>
+        <p class="fs-3 para">Efficient systems for better healthcare experience.</p>
+      </div>
+    </div>
+
+  </div>
+
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon"></span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="next">
+    <span class="carousel-control-next-icon"></span>
+  </button>
+</div>
+
+
+<section class="container">
+  <h1 class="text-center mb-4 mt-4 header">Welcome to Our <br> Hospital Management System</h1>
+  <div class="d-flex justify-content-around align-items-center my-5">
+    <div>
+      <img src="{% static 'images/home.png' %}" alt="" class="image" width="600" height="400">
+    </div>
+    <div class="ms-2 w-50">
+      <p class="fs-4 paragraph">
+        Our Hospital Management System is designed to provide efficient, reliable, and patient-friendly healthcare
+        services. With advanced technology and a dedicated medical team, we ensure smooth hospital operations, accurate
+        patient records, and quality treatment under one platform.
+      </p>
+      <p class="fs-4 paragraph">
+        From patient registration and appointment booking to doctor management and medical records, our system helps
+        streamline all hospital activities. We focus on saving time, reducing paperwork, and improving communication
+        between patients, doctors, and hospital staff.
+      </p>
+    </div>
+  </div>
+
+  <div class="d-flex justify-content-around align-items-center my-5">
+    <div class="ms-2 w-50">
+      <p class="fs-4 paragraph">
+        Our Hospital Management System helps hospitals manage daily operations efficiently and securely. We provide a
+        modern platform that simplifies patient care, appointment scheduling, and hospital administration.
+      </p>
+      <p class="fs-4 paragraph">
+        By combining technology with healthcare, our system reduces manual work, improves accuracy, and ensures better
+        coordination between patients, doctors, and staff.
+    </div>
+    <div>
+      <img src="{% static 'images/home1.png' %}" alt="" class="image" width="600" height="400">
+    </div>
+  </div>
+</section>
+
+<style>
+  .image {
+    border-radius: 15px;
+    box-shadow: rgb(11, 36, 73) 0px 0px 10px 0px;
+    transition: 0.3s;
+    opacity: 0.9;
+  }
+  .header {
+    color: rgb(11, 36, 73);
+  }
+  .paragraph {
+    text-align: justify;
+    text-justify: inter-word;
+    font-size: 18px;
+  }
+  .head {
+    color: rgb(11, 36, 73);
+  }
+  .para {
+    text-align: center;
+    color: black;
+  }
+  .header {
+    font-weight: 700;
+  }
+  
+</style>
+{% endblock %}

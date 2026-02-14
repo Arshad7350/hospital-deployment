@@ -1,0 +1,108 @@
+{% extends 'base.html' %}
+
+{% block title %}About{% endblock %}
+
+{% block content %}
+{% load static %}
+
+<h1 class="text-center mb-4 mt-4">About Us</h1>
+  <hr>
+<p class="text-center text-muted mx-auto mb-4 para" style="max-width: 1000px;">
+    Our hospital is committed to providing high-quality healthcare services with compassion 
+    and excellence. Equipped with modern medical technology and a team of experienced doctors, 
+    we strive to deliver safe, reliable, and patient-centered care across all departments.
+</p>
+
+<section class="container">
+  <div class="row align-items-center mb-4">
+
+    <!-- Image Section -->
+    <div class="col-md-6 text-center">
+      <img src="{% static 'images/about1.png' %}" class="img-fluid rounded image" alt="About Hospital">
+    </div>
+
+    <!-- Text Section -->
+    <div class="col-md-6">
+
+      <div class="card  mb-3">
+        <div class="card-body">
+          <h3 class="card-title">Our Purpose</h3>
+          <p class="card-text">
+            Our Hospital Management System is developed to simplify and digitalize hospital operations.
+            It helps manage patient records, appointments, doctors, and administrative tasks efficiently
+            using modern technology.
+          </p>
+        </div>
+      </div>
+
+      <div class="card  mb-3">
+        <div class="card-body">
+          <h3 class="card-title">What We Do</h3>
+          <p class="card-text"> 
+            We aim to reduce paperwork, improve accuracy, and enhance communication between patients,
+            doctors, and hospital staff. Our system ensures secure data handling and smooth workflow
+            across all departments.
+          </p>
+        </div>
+      </div>
+
+      <div class="card  mb-3">
+        <div class="card-body">
+          <h3 class="card-title">Our Commitment</h3>
+          <p class="card-text">
+            With a strong focus on quality healthcare and user-friendly design, our platform supports
+            hospitals in delivering better patient care and effective management every day.
+          </p>
+        </div>
+      </div>
+
+      <div class="card  mb-3">
+        <div class="card-body">
+          <h3 class="card-title">Why Choose Us</h3>
+          <p class="card-text">
+            Our system is designed with simplicity, security, and reliability in mind. It helps hospitals
+            save time, minimize errors, and improve overall efficiency while maintaining high standards
+            of patient care.
+          </p>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+<style>
+  h1 {
+    color: rgb(11, 36, 73);
+    font-weight: 700;
+  }
+  .card {
+    background-color: rgb(11, 36, 73);
+    color: white;
+    box-shadow: rgb(11, 36, 73) 0px 0px 8px 0px;
+  }
+  .card:hover {
+    scale: calc(1.02);
+    cursor: pointer;
+  }
+  .image {
+    box-shadow: rgb(11, 36, 73) 0px 0px 8px 0px;
+  }
+  .image:hover {
+    scale: calc(1.02);
+    cursor: pointer;
+  }
+  .card-text {
+    text-align: justify;
+    text-justify: inter-word;
+    font-size: 15px;
+  }
+  .para {
+    font-size: 20px;
+    text-align: justify;
+    text-justify: inter-word;
+  }
+</style>
+
+{% endblock %}

@@ -1,0 +1,42 @@
+{% extends 'base.html' %}
+{% load crispy_forms_tags %}
+
+{% block title %}
+Booking
+{% endblock %}
+
+{% block content %}
+<h1 class="text-center mt-3">Make An Appointment</h1>
+<hr>
+<div class="container w-50 p-3 text-center bg-light my-5 rounded shadow-lg">
+    <form action="" method="POST">
+        {% csrf_token %}
+        {{ form|crispy }}
+        <br>
+
+        <button class="shadow-lg mb-4" type="submit">Submit</button>
+        
+    </form>
+</div>
+
+<style>
+    button{
+        background-color: rgb(11, 36, 73);
+        padding: 10px 20px;
+        border: none;
+        color: white;
+        border-radius: 8px;
+    }
+    .container {
+        box-shadow: rgb(11, 36, 73) 0px 0px 12px 0px;
+    }
+    form label {
+        font-size: 18px;
+        font-weight: 600;
+    }
+    h1 {
+        color: rgb(11, 36, 73);
+        font-weight: 700;
+    }
+</style>
+{% endblock %}
